@@ -26,7 +26,9 @@ function changeColor(e) {
 
 function setSize() {
   do {
-    size = parseInt(prompt("Size must be between 2 and 100"));
+    sizeStr = prompt("Size must be between 2 and 100");
+    if (sizeStr === null) break;
+    size = parseInt(sizeStr);
   }
   while (size < 2 || size > 100 || isNaN(size));
 
